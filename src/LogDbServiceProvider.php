@@ -30,7 +30,9 @@ class LogDbServiceProvider extends ServiceProvider
     public function boot()
     {
 
-
+        $this->publishes([
+            __DIR__ . '/migration/022_11_24_110854_create_logs_table.php' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_logs_table.php'),
+        ], 'migrations');
 
     }
 }

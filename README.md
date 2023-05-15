@@ -9,10 +9,10 @@ To install the package, simply require it using Composer:
 composer require bushart/logtodatabase
 ```
 
-### Publish configuration  files
+Next, you should execute the log:db Artisan command
 
 ```
-php artisan vendor:publish --tag=migrations
+php artisan log:db
 ```
 
 After the package is installed, you can run the migration to create the logs table in your database:
@@ -26,7 +26,7 @@ php artisan migrate
 To use the custom log, add it to your config/logging.php file:
 
 ```
-use bushart\logtodatabase\Logging\CustomDatabaseLogger;
+use bushart\logtodatabase\Log\CustomDatabaseLogger;
 
 'channels' => [
     // ...
