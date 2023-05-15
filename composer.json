@@ -1,0 +1,33 @@
+{
+    "name": "bushart/logtodatabase",
+    "description": "A simple modified log to database",
+    "type": "library",
+    "license": "MIT",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://github.com/busharthussain/laravel-log-to-database"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "bushart\\logtodatabase\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "busharthussain",
+            "email": "busharthussain@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "bushart\\logtodatabase\\LogDbServiceProvider"
+            ]
+        }
+    }
+}
