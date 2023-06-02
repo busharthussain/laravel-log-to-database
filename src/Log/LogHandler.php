@@ -9,7 +9,7 @@ use Yoeriboven\LaravelLogDb\Models\LogMessage;
 
 class LogHandler extends AbstractProcessingHandler
 {
-    protected function write(LogRecord $record): void
+    protected function write(array $record): void
     {
         Log::create([
             'message' => $record['message'],
