@@ -11,7 +11,7 @@ class LogHandler extends AbstractProcessingHandler
 {
     protected function write(array $record): void
     {
-        Log::create([
+        Log::on('mysql')->create([
             'message' => $record['message'],
             'level' => $record['level'],
             'level_name' => !empty($record['level_name']) ? $record['level_name'] : null,
