@@ -8,7 +8,23 @@ To install the package, simply require it using Composer:
 ```
 composer require bushart/logtodatabase
 ```
+Publish the package configuration file:
+```
+php artisan vendor:publish --tag=config
+```
+This will publish the configuration file at:
+```
+config/logtodatabase.php
+```
 
+You can configure which database connection should be used for storing logs:
+```
+<?php
+
+return [
+    'db_connection_name' => env('DB_CONNECTION', 'mysql'),
+];
+```
 Next, you should execute the log:db Artisan command
 
 ```
